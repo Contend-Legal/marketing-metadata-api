@@ -1,0 +1,28 @@
+{
+    "recommendations": [
+        //──────────────────────────────────────────────────────────────
+        // Git & Collaboration:
+        //──────────────────────────────────────────────────────────────
+        "mhutchie.git-graph", // Visual Git commit graph
+        "github.copilot", // AI‑powered code suggestions
+        "github.copilot-chat", // Copilot chat interface
+        //──────────────────────────────────────────────────────────────
+        // SSH & Remote Development:
+        //──────────────────────────────────────────────────────────────
+        "ms-vscode-remote.remote-ssh", // SSH remote development
+        "ms-vscode-remote.remote-ssh-edit",
+        "ms-vscode.remote-explorer", // Remote file explorer
+        //──────────────────────────────────────────────────────────────
+        // Editor & Code Quality:
+        //──────────────────────────────────────────────────────────────
+        "editorconfig.editorconfig", // Enforce .editorconfig rules across editors
+        "aaron-bond.better-comments", // Color‑coded TODO/HACK/NOTE annotations
+        //──────────────────────────────────────────────────────────────
+        // Python:
+        //──────────────────────────────────────────────────────────────
+        "ms-python.python", // Python language support
+        "ms-python.vscode-pylance", // Fast, feature‑rich IntelliSense
+        "ms-python.black-formatter", // Black code formatter
+        "ms-python.debugpy", // Python debugging
+    ]
+}

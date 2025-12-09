@@ -1,0 +1,11 @@
+{
+    // Format‑on‑save (applies to all files):
+    "editor.formatOnSave": true,
+
+    // --- Language-Specific Formatter Settings ---
+
+    // Python uses Black:
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
+}
