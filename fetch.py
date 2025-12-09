@@ -1,5 +1,23 @@
-from typing import Any
-from models import GtmAccount, GtmContainer, GtmTag, GaAccount, GaProperty, GaDataStream
+from typing import Any, Callable, Optional
+from googleapiclient.errors import HttpError
+from models import (
+    GtmAccount,
+    GtmContainer,
+    GtmTag,
+    GtmTrigger,
+    GtmVariable,
+    GaAccount,
+    GaProperty,
+    GaDataStream,
+)
+
+# Type alias for the logger function
+LogFunc = Callable[[str], None]
+
+
+def _noop_log(msg: str) -> None:
+    pass
+
 
 # --- GTM Data Fetching ---
 
@@ -18,23 +36,56 @@ def _fetch_gtm_containers(service, account_path: str) -> list[dict[str, Any]]:
     )
 
 
-def _fetch_live_gtm_tags(service, container_path: str) -> list[dict[str, Any]]:
-    """Fetches tags from the live version of a container."""
-    live_version = (
-        service.accounts().containers().versions().live(parent=container_path).execute()
-    )
-    return live_version.get("tag", [])
+def _fetch_live_version(service, container_path: str) -> Optional[dict[str, Any]]:
+    """Fetches the live version of a container. Returns None if no live version exists."""
+    try:
+        return (
+            service.accounts()
+            .containers()
+            .versions()
+            .live(parent=container_path)
+            .execute()
+        )
+    except HttpError as e:
+        if e.resp.status == 404:
+            return None
+        raise
 
 
-def build_gtm_accounts(service) -> list[GtmAccount]:
+def build_gtm_accounts(service, log: LogFunc = _noop_log) -> list[GtmAccount]:
     accounts_list: list[GtmAccount] = []
     for acc in _fetch_gtm_accounts(service):
+        log(f"  Processing GTM account: {acc['name']}")
         account_model = GtmAccount.model_validate(acc)
         containers = _fetch_gtm_containers(service, acc["path"])
+
         for cont in containers:
+            log(f"    Processing container: {cont['name']}")
             container_model = GtmContainer.model_validate(cont)
-            tags = _fetch_live_gtm_tags(service, cont["path"])
-            container_model.tags = [GtmTag.model_validate(t) for t in tags]
+
+            live_version = _fetch_live_version(service, cont["path"])
+            if live_version is None:
+                container_model.error = "No live version published"
+                log(f"      Warning: No live version for {cont['name']}")
+            else:
+                container_model.live_version_id = live_version.get("containerVersionId")
+                container_model.tags = [
+                    GtmTag.model_validate(t) for t in live_version.get("tag", [])
+                ]
+                container_model.triggers = [
+                    GtmTrigger.model_validate(t)
+                    for t in live_version.get("trigger", [])
+                ]
+                container_model.variables = [
+                    GtmVariable.model_validate(v)
+                    for v in live_version.get("variable", [])
+                ]
+                log(
+                    f"      Found {len(container_model.tags)} tags, "
+                    f"{len(container_model.triggers)} triggers, "
+                    f"{len(container_model.variables)} variables"
+                )
+
             account_model.containers.append(container_model)
         accounts_list.append(account_model)
     return accounts_list
@@ -66,9 +117,10 @@ def _fetch_ga_data_streams(service, property_name: str) -> list[dict[str, Any]]:
     )
 
 
-def build_ga_accounts(service) -> list[GaAccount]:
+def build_ga_accounts(service, log: LogFunc = _noop_log) -> list[GaAccount]:
     accounts_list: list[GaAccount] = []
     for acc in _fetch_ga_accounts(service):
+        log(f"  Processing GA account: {acc['displayName']}")
         account_id = acc["name"].split("/")[1]
         account_model = GaAccount(
             display_name=acc["displayName"], account_id=account_id
@@ -76,6 +128,7 @@ def build_ga_accounts(service) -> list[GaAccount]:
 
         properties = _fetch_ga_properties(service, acc["name"])
         for prop in properties:
+            log(f"    Processing property: {prop['displayName']}")
             prop_id = prop["name"].split("/")[1]
 
             streams_raw = _fetch_ga_data_streams(service, prop["name"])
@@ -103,6 +156,7 @@ def build_ga_accounts(service) -> list[GaAccount]:
                         measurement_id=measurement_id,
                     )
                 )
+            log(f"      Found {len(streams_list)} data streams")
 
             account_model.properties.append(
                 GaProperty(
