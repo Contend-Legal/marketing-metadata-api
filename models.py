@@ -1,22 +1,34 @@
 from typing import Optional, Any
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
+
+
+class ModelBase(BaseModel):
+    model_config = ConfigDict(
+        extra="ignore",
+        validate_by_name=True,
+        validate_by_alias=True,
+        validation_error_cause=True,
+    )
 
 
 # --- GTM Models ---
 
-class GtmTag(BaseModel):
+
+class GtmTag(ModelBase):
     name: str
     tag_id: str = Field(..., alias="tagId")
     type: str
     parameters: Optional[list[dict[str, Any]]] = None
 
-class GtmContainer(BaseModel):
+
+class GtmContainer(ModelBase):
     name: str
     public_id: str = Field(..., alias="publicId")
     container_id: str = Field(..., alias="containerId")
     tags: list[GtmTag] = Field(default_factory=list)
 
-class GtmAccount(BaseModel):
+
+class GtmAccount(ModelBase):
     name: str
     account_id: str = Field(..., alias="accountId")
     containers: list[GtmContainer] = Field(default_factory=list)
@@ -24,19 +36,22 @@ class GtmAccount(BaseModel):
 
 # --- GA4 Models ---
 
-class GaDataStream(BaseModel):
+
+class GaDataStream(ModelBase):
     display_name: str = Field(..., alias="displayName")
     type: str
     measurement_id: Optional[str] = None
 
-class GaProperty(BaseModel):
+
+class GaProperty(ModelBase):
     display_name: str = Field(..., alias="displayName")
     property_id: str
     time_zone: str = Field(..., alias="timeZone")
     currency_code: str = Field(..., alias="currencyCode")
     data_streams: list[GaDataStream] = Field(default_factory=list, alias="dataStreams")
 
-class GaAccount(BaseModel):
+
+class GaAccount(ModelBase):
     display_name: str = Field(..., alias="displayName")
     account_id: str
     properties: list[GaProperty] = Field(default_factory=list)
@@ -44,6 +59,7 @@ class GaAccount(BaseModel):
 
 # --- Report Model ---
 
-class AuditReport(BaseModel):
+
+class AuditReport(ModelBase):
     gtm_accounts: list[GtmAccount]
     ga_accounts: list[GaAccount]
