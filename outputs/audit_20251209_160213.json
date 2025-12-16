@@ -1,0 +1,874 @@
+{
+  "gtm_accounts": [
+    {
+      "name": "Fair Fight",
+      "accountId": "6219958667",
+      "containers": [
+        {
+          "name": "Fair Fight",
+          "publicId": "GTM-MG9KKVKJ",
+          "containerId": "179041573",
+          "tags": [
+            {
+              "name": "Hotjar Tracking Code",
+              "tagId": "3",
+              "type": "hjtc",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Google Conversion Linker",
+              "tagId": "4",
+              "type": "gclidw",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Google Analytics Tag",
+              "tagId": "5",
+              "type": "googtag",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Vehicle Consumer March",
+              "tagId": "7",
+              "type": "html",
+              "firingTriggerId": [
+                "6"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Mar 2024 Paid Subscriber (FairFight)",
+              "tagId": "10",
+              "type": "awct",
+              "firingTriggerId": [
+                "9"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Mar 2024 Email Provided (FairFight)",
+              "tagId": "12",
+              "type": "awct",
+              "firingTriggerId": [
+                "13"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - General Consumer March",
+              "tagId": "18",
+              "type": "html",
+              "firingTriggerId": [
+                "17"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Flights Consumer March",
+              "tagId": "19",
+              "type": "html",
+              "firingTriggerId": [
+                "16"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Mar 2024 App Opened (FairFight)",
+              "tagId": "20",
+              "type": "awct",
+              "firingTriggerId": [
+                "21"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Child Custody March",
+              "tagId": "23",
+              "type": "html",
+              "firingTriggerId": [
+                "22"
+              ],
+              "parameters": null
+            }
+          ],
+          "triggers": [
+            {
+              "name": "Page View - Vehicle",
+              "triggerId": "6",
+              "type": "pageview"
+            },
+            {
+              "name": "Payment Success Page Conversion",
+              "triggerId": "9",
+              "type": "pageview"
+            },
+            {
+              "name": "Email Provision Form Submitted",
+              "triggerId": "13",
+              "type": "formSubmission"
+            },
+            {
+              "name": "Page View - Flight Delay",
+              "triggerId": "16",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Consumer Rights",
+              "triggerId": "17",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - App Chatbot Page",
+              "triggerId": "21",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Child Custody",
+              "triggerId": "22",
+              "type": "pageview"
+            }
+          ],
+          "variables": [
+            {
+              "name": "Stripe Transaction ID",
+              "variableId": "8",
+              "type": "v"
+            }
+          ],
+          "live_version_id": "8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "ContendLegal.com",
+      "accountId": "6003127829",
+      "containers": [
+        {
+          "name": "contendlegal.com",
+          "publicId": "GTM-T3GBSSK",
+          "containerId": "39803438",
+          "tags": [
+            {
+              "name": "Conversion Linker",
+              "tagId": "62",
+              "type": "gclidw",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Google Analytics Main Tag",
+              "tagId": "77",
+              "type": "googtag",
+              "firingTriggerId": [
+                "2147479573"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Pixel",
+              "tagId": "80",
+              "type": "cvt_5RM3Q",
+              "firingTriggerId": [
+                "92"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Event - CompleteRegistration",
+              "tagId": "82",
+              "type": "cvt_5RM3Q",
+              "firingTriggerId": [
+                "81"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Event - Purchase",
+              "tagId": "89",
+              "type": "cvt_5RM3Q",
+              "firingTriggerId": [
+                "88"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "GA Event - Purchase",
+              "tagId": "91",
+              "type": "gaawe",
+              "firingTriggerId": [
+                "88"
+              ],
+              "parameters": null
+            }
+          ],
+          "triggers": [
+            {
+              "name": "Meta Event - complete_registration",
+              "triggerId": "81",
+              "type": "customEvent"
+            },
+            {
+              "name": "Purchase",
+              "triggerId": "88",
+              "type": "customEvent"
+            },
+            {
+              "name": "Page View - app.contendlegal.com",
+              "triggerId": "92",
+              "type": "pageview"
+            },
+            {
+              "name": "Exception - Live Site Only",
+              "triggerId": "93",
+              "type": "customEvent"
+            }
+          ],
+          "variables": [
+            {
+              "name": "Meta Pixel ID",
+              "variableId": "79",
+              "type": "c"
+            },
+            {
+              "name": "DLV - ecommerce.currency",
+              "variableId": "85",
+              "type": "v"
+            },
+            {
+              "name": "DLV - ecommerce.transaction_id",
+              "variableId": "86",
+              "type": "v"
+            },
+            {
+              "name": "DLV - ecommerce.value",
+              "variableId": "87",
+              "type": "v"
+            },
+            {
+              "name": "Google Analytics Measurement ID - contendlegal.com",
+              "variableId": "90",
+              "type": "c"
+            },
+            {
+              "name": "DLV - user_data.email",
+              "variableId": "95",
+              "type": "v"
+            },
+            {
+              "name": "DLV - user_data.external_id",
+              "variableId": "96",
+              "type": "v"
+            }
+          ],
+          "live_version_id": "24",
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Contend.Legal",
+      "accountId": "6207757450",
+      "containers": [
+        {
+          "name": "contend.legal",
+          "publicId": "GTM-5CPGKLTF",
+          "containerId": "172287390",
+          "tags": [
+            {
+              "name": "Google Analytics Main Tag",
+              "tagId": "3",
+              "type": "googtag",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Conversion Linker",
+              "tagId": "4",
+              "type": "gclidw",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "(Page load pricing) (1)",
+              "tagId": "9",
+              "type": "awct",
+              "firingTriggerId": [
+                "8"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Pixel Conversion - Paying Customer",
+              "tagId": "12",
+              "type": "html",
+              "firingTriggerId": [
+                "10"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Hotjar Tracking Code",
+              "tagId": "15",
+              "type": "hjtc",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Pixel",
+              "tagId": "25",
+              "type": "cvt_172287390_23",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Pixel - Conversion",
+              "tagId": "27",
+              "type": "cvt_172287390_23",
+              "firingTriggerId": [
+                "10"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Multilingual",
+              "tagId": "30",
+              "type": "html",
+              "firingTriggerId": [
+                "29"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Middle Age Middle Income",
+              "tagId": "32",
+              "type": "html",
+              "firingTriggerId": [
+                "31"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Baseline Mar 2024",
+              "tagId": "33",
+              "type": "html",
+              "firingTriggerId": [
+                "34"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Mar 2024 App Opened (Contend)",
+              "tagId": "37",
+              "type": "awct",
+              "firingTriggerId": [
+                "38"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Rent and Housing",
+              "tagId": "40",
+              "type": "html",
+              "firingTriggerId": [
+                "39"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Child Custody March",
+              "tagId": "42",
+              "type": "html",
+              "firingTriggerId": [
+                "41"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Online Legal Advice (Google)",
+              "tagId": "44",
+              "type": "html",
+              "firingTriggerId": [
+                "43"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Bing UET Tag",
+              "tagId": "45",
+              "type": "html",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Legal Advice Online (Reddit)",
+              "tagId": "48",
+              "type": "html",
+              "firingTriggerId": [
+                "47"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - General-Home May",
+              "tagId": "50",
+              "type": "html",
+              "firingTriggerId": [
+                "49"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - Employment-Home May",
+              "tagId": "52",
+              "type": "html",
+              "firingTriggerId": [
+                "51"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - SEO Article",
+              "tagId": "56",
+              "type": "cvt_172287390_54",
+              "firingTriggerId": [
+                "55"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "GA4 Event - Purchase",
+              "tagId": "61",
+              "type": "gaawe",
+              "firingTriggerId": [
+                "73"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "AHrefs -27-05-25",
+              "tagId": "63",
+              "type": "html",
+              "firingTriggerId": [
+                "2147479553"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - 2025-09-sandra-micro-proof-v1",
+              "tagId": "66",
+              "type": "cvt_172287390_54",
+              "firingTriggerId": [
+                "65"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set Campaign Cookie - 2025-09-james-micro-proof-v1",
+              "tagId": "68",
+              "type": "cvt_172287390_54",
+              "firingTriggerId": [
+                "67"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Google Ads Conversion Tracking",
+              "tagId": "74",
+              "type": "awct",
+              "firingTriggerId": [
+                "73"
+              ],
+              "parameters": null
+            }
+          ],
+          "triggers": [
+            {
+              "name": "Created Account Conversion (Pre-Pricing, 12/23)",
+              "triggerId": "8",
+              "type": "pageview"
+            },
+            {
+              "name": "Payment Success Page Conversion (transaction ID not required)",
+              "triggerId": "10",
+              "type": "pageview"
+            },
+            {
+              "name": "cookieConsent Trigger",
+              "triggerId": "22",
+              "type": "customEvent"
+            },
+            {
+              "name": "Page Load with Cookie Consent",
+              "triggerId": "28",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Multilingual",
+              "triggerId": "29",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Middle Age Middle Income",
+              "triggerId": "31",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Try It Now",
+              "triggerId": "34",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - App Chatbot Page",
+              "triggerId": "38",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Rent and Housing",
+              "triggerId": "39",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Child Custody",
+              "triggerId": "41",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Online Legal Advice",
+              "triggerId": "43",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Legal Advice Online",
+              "triggerId": "47",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - General-Home May",
+              "triggerId": "49",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - Employment-Home May",
+              "triggerId": "51",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - SEO Article",
+              "triggerId": "55",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - /everyday-legal-help",
+              "triggerId": "65",
+              "type": "pageview"
+            },
+            {
+              "name": "Page View - /employment-legal-help",
+              "triggerId": "67",
+              "type": "pageview"
+            },
+            {
+              "name": "Purchase",
+              "triggerId": "73",
+              "type": "customEvent"
+            }
+          ],
+          "variables": [
+            {
+              "name": "cookieConsent",
+              "variableId": "21",
+              "type": "k"
+            },
+            {
+              "name": "Meta Pixel ID",
+              "variableId": "24",
+              "type": "c"
+            },
+            {
+              "name": "DLV - ecommerce.transaction_id",
+              "variableId": "69",
+              "type": "v"
+            },
+            {
+              "name": "DLV - ecommerce.value",
+              "variableId": "70",
+              "type": "v"
+            },
+            {
+              "name": "DLV - ecommerce.currency",
+              "variableId": "71",
+              "type": "v"
+            }
+          ],
+          "live_version_id": "41",
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "ContendLaw.co.uk",
+      "accountId": "6326728448",
+      "containers": [
+        {
+          "name": "contendlaw.co.uk",
+          "publicId": "GTM-NPMR4BCP",
+          "containerId": "236730614",
+          "tags": [
+            {
+              "name": "Meta Pixel",
+              "tagId": "5",
+              "type": "cvt_5RM3Q",
+              "firingTriggerId": [
+                "27"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Event - ClickToApp",
+              "tagId": "6",
+              "type": "cvt_5RM3Q",
+              "firingTriggerId": [
+                "7",
+                "8",
+                "30"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "ClickCease",
+              "tagId": "10",
+              "type": "html",
+              "firingTriggerId": [
+                "27"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Cross-Domain Link Decorator",
+              "tagId": "11",
+              "type": "html",
+              "firingTriggerId": [
+                "27"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Set UTM cookies from query params",
+              "tagId": "13",
+              "type": "html",
+              "firingTriggerId": [
+                "14",
+                "27"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Consent Initialization",
+              "tagId": "16",
+              "type": "cvt_WF68Z",
+              "firingTriggerId": [
+                "2147479572"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Consent Update",
+              "tagId": "21",
+              "type": "html",
+              "firingTriggerId": [
+                "19",
+                "20",
+                "18"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Meta Event - CompleteRegistration",
+              "tagId": "32",
+              "type": "cvt_5RM3Q",
+              "firingTriggerId": [
+                "27"
+              ],
+              "parameters": null
+            },
+            {
+              "name": "Google Analytics Main Tag",
+              "tagId": "38",
+              "type": "googtag",
+              "firingTriggerId": [
+                "2147479573",
+                "27"
+              ],
+              "parameters": null
+            }
+          ],
+          "triggers": [
+            {
+              "name": "Link Click to app.contendlegal.com",
+              "triggerId": "7",
+              "type": "linkClick"
+            },
+            {
+              "name": "Link Click with class 'cta-to-app'",
+              "triggerId": "8",
+              "type": "linkClick"
+            },
+            {
+              "name": "Page View - URL contains UTM param",
+              "triggerId": "14",
+              "type": "pageview"
+            },
+            {
+              "name": "Complianz Event - Statistics",
+              "triggerId": "18",
+              "type": "customEvent"
+            },
+            {
+              "name": "Complianz Event - Marketing",
+              "triggerId": "19",
+              "type": "customEvent"
+            },
+            {
+              "name": "Complianz Event - Preferences",
+              "triggerId": "20",
+              "type": "customEvent"
+            },
+            {
+              "name": "EXCEPTION - URL doesn't contain UTM param",
+              "triggerId": "24",
+              "type": "customEvent"
+            },
+            {
+              "name": "Consent Granted - Statistics",
+              "triggerId": "26",
+              "type": "customEvent"
+            },
+            {
+              "name": "Consent Granted - Marketing",
+              "triggerId": "27",
+              "type": "customEvent"
+            },
+            {
+              "name": "Consent Granted - Preferences",
+              "triggerId": "28",
+              "type": "customEvent"
+            },
+            {
+              "name": "Link Click to /get-started-form",
+              "triggerId": "30",
+              "type": "linkClick"
+            },
+            {
+              "name": "EXCEPTION - Path doesn't start with /contend-app-connecting",
+              "triggerId": "33",
+              "type": "customEvent"
+            }
+          ],
+          "variables": [
+            {
+              "name": "Meta Pixel ID",
+              "variableId": "4",
+              "type": "c"
+            },
+            {
+              "name": "DLV - cmplz_event_marketing",
+              "variableId": "17",
+              "type": "v"
+            },
+            {
+              "name": "Google Analytics Measurement ID - contendlaw.co.uk",
+              "variableId": "37",
+              "type": "c"
+            }
+          ],
+          "live_version_id": "16",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "ga_accounts": [
+    {
+      "displayName": "Contend Legal",
+      "account_id": "286030131",
+      "properties": [
+        {
+          "displayName": "contendlegal.com + contend.legal",
+          "property_id": "407689161",
+          "timeZone": "Europe/London",
+          "currencyCode": "USD",
+          "dataStreams": [
+            {
+              "displayName": "contend.legal",
+              "type": "WEB",
+              "measurement_id": "G-MVSBP5QTD9"
+            },
+            {
+              "displayName": "contendlegal.com",
+              "type": "WEB",
+              "measurement_id": "G-TLYB7FFXWN"
+            }
+          ]
+        },
+        {
+          "displayName": "Fair Fight",
+          "property_id": "429837748",
+          "timeZone": "America/Toronto",
+          "currencyCode": "GBP",
+          "dataStreams": [
+            {
+              "displayName": "Fair Fight - Main Stream",
+              "type": "WEB",
+              "measurement_id": "G-N5HYC0FMLG"
+            }
+          ]
+        },
+        {
+          "displayName": "contendlaw.co.uk",
+          "property_id": "515820170",
+          "timeZone": "Etc/GMT",
+          "currencyCode": "USD",
+          "dataStreams": [
+            {
+              "displayName": "contendlaw.co.uk",
+              "type": "WEB",
+              "measurement_id": "G-S9HWPLV6XK"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "gtm_accounts": 4,
+    "gtm_containers": 4,
+    "gtm_tags": 49,
+    "gtm_triggers": 41,
+    "gtm_variables": 16,
+    "ga_accounts": 1,
+    "ga_properties": 3,
+    "ga_streams": 4
+  }
+}
