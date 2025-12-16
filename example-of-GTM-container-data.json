@@ -1,0 +1,706 @@
+{
+  "path": "accounts/6003127829/containers/39803438/versions/24",
+  "accountId": "6003127829",
+  "containerId": "39803438",
+  "containerVersionId": "24",
+  "name": "Rename \"Google Analytics Measurement ID\" variable",
+  "container": {
+    "path": "accounts/6003127829/containers/39803438",
+    "accountId": "6003127829",
+    "containerId": "39803438",
+    "name": "contendlegal.com",
+    "publicId": "GTM-T3GBSSK",
+    "usageContext": ["<class 'str'>"],
+    "fingerprint": "1765296105298",
+    "tagManagerUrl": "https://tagmanager.g…",
+    "features": "<class 'dict'>",
+    "tagIds": ["<class 'str'>"]
+  },
+  "tag": [
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "tagId": "62",
+      "name": "Conversion Linker",
+      "type": "gclidw",
+      "parameter": [
+        {
+          "type": "boolean",
+          "key": "enableCrossDomain",
+          "value": "true"
+        },
+        {
+          "type": "boolean",
+          "key": "enableUrlPassthrough",
+          "value": "true"
+        },
+        {
+          "type": "boolean",
+          "key": "acceptIncoming",
+          "value": "true"
+        },
+        {
+          "type": "template",
+          "key": "linkerDomains",
+          "value": "contendlegal.com, app.contendlegal.com"
+        },
+        {
+          "type": "boolean",
+          "key": "enableCookieOverrides",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "formDecoration",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "urlPosition",
+          "value": "query"
+        }
+      ],
+      "fingerprint": "1763647415285",
+      "firingTriggerId": ["2147479553"],
+      "tagFiringOption": "oncePerEvent",
+      "monitoringMetadata": {
+        "type": "map"
+      },
+      "consentSettings": {
+        "consentStatus": "notSet"
+      }
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "tagId": "77",
+      "name": "Google Analytics Main Tag",
+      "type": "googtag",
+      "parameter": [
+        {
+          "type": "template",
+          "key": "tagId",
+          "value": "{{Google Analytics Measurement ID - contendlegal.com}}"
+        }
+      ],
+      "fingerprint": "1764713963560",
+      "firingTriggerId": ["2147479573"],
+      "parentFolderId": "84",
+      "tagFiringOption": "oncePerEvent",
+      "monitoringMetadata": {
+        "type": "map"
+      },
+      "consentSettings": {
+        "consentStatus": "notSet"
+      }
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "tagId": "80",
+      "name": "Meta Pixel",
+      "type": "cvt_5RM3Q",
+      "parameter": [
+        {
+          "type": "boolean",
+          "key": "disablePushState",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "pixelId",
+          "value": "{{Meta Pixel ID}}"
+        },
+        {
+          "type": "template",
+          "key": "standardEventName",
+          "value": "PageView"
+        },
+        {
+          "type": "boolean",
+          "key": "disableAutoConfig",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "enhancedEcommerce",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "dpoLDU",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "eventName",
+          "value": "standard"
+        },
+        {
+          "type": "boolean",
+          "key": "objectPropertiesFromVariable",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "consent",
+          "value": "true"
+        },
+        {
+          "type": "boolean",
+          "key": "advancedMatching",
+          "value": "false"
+        }
+      ],
+      "fingerprint": "1764717370970",
+      "firingTriggerId": ["92"],
+      "parentFolderId": "83",
+      "tagFiringOption": "oncePerEvent",
+      "monitoringMetadata": {
+        "type": "map"
+      },
+      "consentSettings": {
+        "consentStatus": "notSet"
+      }
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "tagId": "82",
+      "name": "Meta Event - CompleteRegistration",
+      "type": "cvt_5RM3Q",
+      "parameter": [
+        {
+          "type": "boolean",
+          "key": "disablePushState",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "pixelId",
+          "value": "{{Meta Pixel ID}}"
+        },
+        {
+          "type": "template",
+          "key": "standardEventName",
+          "value": "CompleteRegistration"
+        },
+        {
+          "type": "boolean",
+          "key": "disableAutoConfig",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "enhancedEcommerce",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "dpoLDU",
+          "value": "false"
+        },
+        {
+          "type": "list",
+          "key": "advancedMatchingList",
+          "list": ["<class 'dict'>", "<class 'dict'>"]
+        },
+        {
+          "type": "template",
+          "key": "eventName",
+          "value": "standard"
+        },
+        {
+          "type": "boolean",
+          "key": "objectPropertiesFromVariable",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "consent",
+          "value": "true"
+        },
+        {
+          "type": "boolean",
+          "key": "advancedMatching",
+          "value": "true"
+        }
+      ],
+      "fingerprint": "1765296277047",
+      "firingTriggerId": ["81"],
+      "blockingTriggerId": ["<class 'str'>"],
+      "parentFolderId": "83",
+      "tagFiringOption": "oncePerEvent",
+      "paused": true,
+      "monitoringMetadata": {
+        "type": "map"
+      },
+      "consentSettings": {
+        "consentStatus": "notSet"
+      }
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "tagId": "89",
+      "name": "Meta Event - Purchase",
+      "type": "cvt_5RM3Q",
+      "parameter": [
+        {
+          "type": "boolean",
+          "key": "disablePushState",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "eventId",
+          "value": "{{DLV - ecommerce.transaction_id}}"
+        },
+        {
+          "type": "template",
+          "key": "standardEventName",
+          "value": "Purchase"
+        },
+        {
+          "type": "list",
+          "key": "advancedMatchingList",
+          "list": ["<class 'dict'>"]
+        },
+        {
+          "type": "boolean",
+          "key": "objectPropertiesFromVariable",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "consent",
+          "value": "true"
+        },
+        {
+          "type": "template",
+          "key": "pixelId",
+          "value": "{{Meta Pixel ID}}"
+        },
+        {
+          "type": "list",
+          "key": "objectPropertyList",
+          "list": ["<class 'dict'>", "<class 'dict'>"]
+        },
+        {
+          "type": "boolean",
+          "key": "disableAutoConfig",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "enhancedEcommerce",
+          "value": "false"
+        },
+        {
+          "type": "boolean",
+          "key": "dpoLDU",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "eventName",
+          "value": "standard"
+        },
+        {
+          "type": "boolean",
+          "key": "advancedMatching",
+          "value": "true"
+        }
+      ],
+      "fingerprint": "1764816331799",
+      "firingTriggerId": ["88"],
+      "blockingTriggerId": ["<class 'str'>"],
+      "parentFolderId": "83",
+      "tagFiringOption": "oncePerEvent",
+      "monitoringMetadata": {
+        "type": "map"
+      },
+      "consentSettings": {
+        "consentStatus": "notSet"
+      }
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "tagId": "91",
+      "name": "GA Event - Purchase",
+      "type": "gaawe",
+      "parameter": [
+        {
+          "type": "boolean",
+          "key": "sendEcommerceData",
+          "value": "false"
+        },
+        {
+          "type": "list",
+          "key": "eventSettingsTable",
+          "list": ["<class 'dict'>", "<class 'dict'>", "<class 'dict'>"]
+        },
+        {
+          "type": "template",
+          "key": "eventName",
+          "value": "purchase"
+        },
+        {
+          "type": "template",
+          "key": "measurementIdOverride",
+          "value": "{{Google Analytics Measurement ID - contendlegal.com}}"
+        }
+      ],
+      "fingerprint": "1764789972312",
+      "firingTriggerId": ["88"],
+      "blockingTriggerId": ["<class 'str'>"],
+      "parentFolderId": "84",
+      "tagFiringOption": "oncePerEvent",
+      "monitoringMetadata": {
+        "type": "map"
+      },
+      "consentSettings": {
+        "consentStatus": "notSet"
+      }
+    }
+  ],
+  "trigger": [
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "triggerId": "81",
+      "name": "Meta Event - complete_registration",
+      "type": "customEvent",
+      "customEventFilter": ["<class 'dict'>"],
+      "fingerprint": "1764712970826",
+      "parentFolderId": "83"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "triggerId": "88",
+      "name": "Purchase",
+      "type": "customEvent",
+      "customEventFilter": ["<class 'dict'>"],
+      "fingerprint": "1764713804613"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "triggerId": "92",
+      "name": "Page View - app.contendlegal.com",
+      "type": "pageview",
+      "filter": ["<class 'dict'>"],
+      "fingerprint": "1764717349653"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "triggerId": "93",
+      "name": "Exception - Live Site Only",
+      "type": "customEvent",
+      "customEventFilter": ["<class 'dict'>"],
+      "filter": ["<class 'dict'>"],
+      "fingerprint": "1764789861452"
+    }
+  ],
+  "variable": [
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "variableId": "79",
+      "name": "Meta Pixel ID",
+      "type": "c",
+      "parameter": [
+        {
+          "type": "template",
+          "key": "value",
+          "value": "1118507049527119"
+        }
+      ],
+      "fingerprint": "1764714159143",
+      "parentFolderId": "83",
+      "formatValue": "<class 'dict'>"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "variableId": "85",
+      "name": "DLV - ecommerce.currency",
+      "type": "v",
+      "notes": "• 3-letter currency code\n• Uppercase",
+      "parameter": [
+        {
+          "type": "integer",
+          "key": "dataLayerVersion",
+          "value": "2"
+        },
+        {
+          "type": "boolean",
+          "key": "setDefaultValue",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "name",
+          "value": "ecommerce.currency"
+        }
+      ],
+      "fingerprint": "1764713378803",
+      "formatValue": "<class 'dict'>"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "variableId": "86",
+      "name": "DLV - ecommerce.transaction_id",
+      "type": "v",
+      "parameter": [
+        {
+          "type": "integer",
+          "key": "dataLayerVersion",
+          "value": "2"
+        },
+        {
+          "type": "boolean",
+          "key": "setDefaultValue",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "name",
+          "value": "ecommerce.transaction_id"
+        }
+      ],
+      "fingerprint": "1764713416988",
+      "formatValue": "<class 'dict'>"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "variableId": "87",
+      "name": "DLV - ecommerce.value",
+      "type": "v",
+      "notes": "• Amount in full currency units (eg dollars, not cents).",
+      "parameter": [
+        {
+          "type": "integer",
+          "key": "dataLayerVersion",
+          "value": "2"
+        },
+        {
+          "type": "boolean",
+          "key": "setDefaultValue",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "name",
+          "value": "ecommerce.value"
+        }
+      ],
+      "fingerprint": "1764713489760",
+      "formatValue": "<class 'dict'>"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "variableId": "90",
+      "name": "Google Analytics Measurement ID - contendlegal.com",
+      "type": "c",
+      "parameter": [
+        {
+          "type": "template",
+          "key": "value",
+          "value": "G-TLYB7FFXWN"
+        }
+      ],
+      "fingerprint": "1765301673667",
+      "parentFolderId": "84",
+      "formatValue": "<class 'dict'>"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "variableId": "95",
+      "name": "DLV - user_data.email",
+      "type": "v",
+      "parameter": [
+        {
+          "type": "integer",
+          "key": "dataLayerVersion",
+          "value": "2"
+        },
+        {
+          "type": "boolean",
+          "key": "setDefaultValue",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "name",
+          "value": "user_data.email"
+        }
+      ],
+      "fingerprint": "1764816082742",
+      "formatValue": "<class 'dict'>"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "variableId": "96",
+      "name": "DLV - user_data.external_id",
+      "type": "v",
+      "parameter": [
+        {
+          "type": "integer",
+          "key": "dataLayerVersion",
+          "value": "2"
+        },
+        {
+          "type": "boolean",
+          "key": "setDefaultValue",
+          "value": "false"
+        },
+        {
+          "type": "template",
+          "key": "name",
+          "value": "user_data.external_id"
+        }
+      ],
+      "fingerprint": "1764816104035",
+      "formatValue": "<class 'dict'>"
+    }
+  ],
+  "folder": [
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "folderId": "60",
+      "name": "Click events",
+      "fingerprint": "1612652192986"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "folderId": "61",
+      "name": "Submit events",
+      "fingerprint": "1612652234061"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "folderId": "71",
+      "name": "Conversion tags (for Ads)",
+      "fingerprint": "1612736526514"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "folderId": "83",
+      "name": "Meta",
+      "fingerprint": "1764712959203"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "folderId": "84",
+      "name": "Google Analytics",
+      "fingerprint": "1764712994091"
+    }
+  ],
+  "builtInVariable": [
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "pageUrl",
+      "name": "Page URL"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "pageHostname",
+      "name": "Page Hostname"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "pagePath",
+      "name": "Page Path"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "referrer",
+      "name": "Referrer"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "event",
+      "name": "Event"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "clickElement",
+      "name": "Click Element"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "clickClasses",
+      "name": "Click Classes"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "clickId",
+      "name": "Click ID"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "clickTarget",
+      "name": "Click Target"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "formElement",
+      "name": "Form Element"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "formClasses",
+      "name": "Form Classes"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "formId",
+      "name": "Form ID"
+    },
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "type": "containerId",
+      "name": "Container ID"
+    }
+  ],
+  "fingerprint": "1765301715400",
+  "tagManagerUrl": "https://tagmanager.g…",
+  "customTemplate": [
+    {
+      "accountId": "6003127829",
+      "containerId": "39803438",
+      "templateId": "78",
+      "name": "Facebook Pixel",
+      "fingerprint": "1764712080119",
+      "templateData": "___TERMS_OF_SERVICE_…",
+      "galleryReference": "<class 'dict'>"
+    }
+  ]
+}
