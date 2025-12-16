@@ -1,5 +1,6 @@
 from typing import Any, Callable, Optional
 from googleapiclient.errors import HttpError
+import json
 from models import (
     GtmAccount,
     GtmContainer,
@@ -69,6 +70,78 @@ def build_gtm_accounts(service, log: LogFunc = _noop_log) -> list[GtmAccount]:
                 log(f"      Warning: No live version for {cont['name']}")
             else:
                 container_model.live_version_id = live_version.get("containerVersionId")
+
+                KEYS_TO_EXPAND = [
+                    "tag",
+                    "parameter",
+                    "firingTriggerId",
+                    "monitoringMetadata",
+                    "consentSettings",
+                ]
+
+                # Log a summary of the live version structure, showing all fields but truncating long values
+                def truncate_string(
+                    val, truncate_at: int = 100, truncate_to: int = 20
+                ) -> Any:
+                    if isinstance(val, str) and len(val) > truncate_at:
+                        return val[:truncate_to] + "…"
+                    return val
+
+                def summarize_object(
+                    obj: Any,
+                    max_depth: int | None = None,
+                    current_depth: int = 0,
+                    parent_key: str = "",
+                ) -> Any:
+                    if parent_key in KEYS_TO_EXPAND:
+                        max_depth = None  # Expand fully
+
+                    if max_depth is not None and current_depth >= max_depth:
+                        if hasattr(obj, "name"):
+                            return f"<{obj.name} ...>"
+                        return f"{str(type(obj))}"
+
+                    if isinstance(obj, dict):
+                        summary = {}
+                        for k, v in obj.items():
+                            if isinstance(v, str):
+                                summary[k] = truncate_string(v)
+                            elif isinstance(v, list):
+                                summary[k] = [
+                                    summarize_object(
+                                        item,
+                                        max_depth=max_depth,
+                                        current_depth=current_depth + 1,
+                                        parent_key=k,
+                                    )
+                                    for item in v
+                                ]
+                            elif isinstance(v, dict):
+                                summary[k] = summarize_object(
+                                    v,
+                                    max_depth=max_depth,
+                                    current_depth=current_depth + 1,
+                                    parent_key=k,
+                                )
+                            else:
+                                summary[k] = v
+                        return summary
+                    elif isinstance(obj, list):
+                        return [
+                            summarize_object(
+                                item,
+                                max_depth=max_depth,
+                                current_depth=current_depth + 1,
+                                parent_key=parent_key,
+                            )
+                            for item in obj
+                        ]
+                    return obj
+
+                summary = summarize_object(live_version, max_depth=1)
+                log("      LIVE VERSION SUMMARY:")
+                log(json.dumps(summary, indent=2, ensure_ascii=False))
+
                 container_model.tags = [
                     GtmTag.model_validate(t) for t in live_version.get("tag", [])
                 ]
